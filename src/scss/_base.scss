@@ -14,41 +14,33 @@
     color: #314584;
 }
 
-.red-text {
-    color: #ff3946;
-}
-
-.text-center {
-    text-align: center;
-}
-
-a {
-    text-decoration: none;
-    color: #314584;
-}
+//HERO
 
 a:hover,
 .header select:hover {
     cursor: pointer;
 }
 
-.title {
+.hero-title {
     font-size: 40px;
 }
 
-.subtitle {
+.block-title {
     font-size: 25px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
-.text {
+.txt-describtion {
     font-weight: normal;
     line-height: 150%;
     padding-bottom: 30px;
     padding-top: 30px;
-    font-size: 18px;
+    font-size: 15px;
+    text-align: center;
 }
 
-.max-width_768 {
+.media-768 {
     display: none;
 }
 
@@ -74,7 +66,6 @@ a:hover,
     display: none;
     position: absolute;
     width: 150px;
-    background: #ffffff;
     z-index: 99999;
     margin-left: -52px;
     text-align: center;
@@ -95,8 +86,8 @@ a:hover,
 }
 
 .header select,
-.header .header_item__button a,
-.contacts .contacts_button {
+.header_item__button a,
+.contacts_button {
     font-family: 'Work Sans', sans-serif;
     font-weight: bold;
     font-size: 10px;
@@ -108,7 +99,7 @@ a:hover,
     outline: none;
 }
 
-.header .header_item__button {
+.header_item__button {
     border: none;
     padding: 15px;
     background: white;
@@ -124,11 +115,11 @@ a:hover,
 }
 
 .hero_item__button {
-    margin-left: -200px;
+    margin-left: -230px;
 }
 
-.hero .hero_item__button,
-.contacts .contacts_button {
+.hero_item__button,
+.contacts_button {
     background: #ff3946;
     border: none;
     padding: 15px 30px;
@@ -138,21 +129,23 @@ a:hover,
     outline: none;
 }
 
-.hero .hero_item__button a {
+.hero_item__button a {
     font-size: 14px;
     color: #ffffff;
     font-weight: bold;
 }
 
-.hero .slick-prev:before,
-.hero .slick-next:before {
+.slick-prev:before,
+.slick-next:before {
     color: #314584;
 }
 
-.hero .slick-next {
+.slick-next {
     right: 5px;
 }
 
+
+//WORKS
 
 .works .works-flex {
     flex-wrap: wrap;
@@ -160,7 +153,7 @@ a:hover,
     padding-bottom: 30px;
 }
 
-.works .works-flex>div {
+.works .works-flex div {
     width: 33%;
     height: auto;
 }
@@ -169,89 +162,78 @@ a:hover,
     width: 100%;
 }
 
-.contacts {
-    padding-top: 100px;
-    padding-bottom: 100px;
+//CONTACT FORM
+form {
+    width: 70%;
+    align-self: center;
 }
 
-.contacts .contacts-flex {
+.contact-form {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.contacts-flex {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.contacts .form {
-    align-self: center;
-}
-
-.contacts .form input,
-.contacts .form textarea {
+.form input,
+.form textarea {
     border: none;
 }
 
-.contacts form p {
+form p {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: start;
 }
 
-.contacts form {
-    width: 70%;
-}
-
-
-.contacts form p input {
+form p input {
     height: 30px;
     width: 100%;
 }
 
-.contacts form textarea {
+form textarea {
     height: 60px;
     width: 100%;
     resize: none;
+    padding-top: 15px;
 }
 
-.contacts .form-flex p input,
-.contacts .form textarea {
-    color: #314584;
+.form-flex p input,
+.form textarea {
     background: #f4fafe;
     font-family: 'Work Sans', sans-serif;
-    font-size: 10px;
+    font-size: 15px;
     font-weight: bold;
     padding-left: 15px;
     outline-color: #314584;
 }
 
-.contacts .form-flex p {
-    background: #f4fafe;
-}
-
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
     outline: none;
+    color: #314584;
 }
 
-.contacts .form input[type="submit"] {
+.contacts_button {
     cursor: pointer;
-    margin-top: 20px;
-}
-
-p+.subtitle {
-    padding-bottom: 20px;
-    padding-top: 20px;
+    margin-top: 50px;
 }
 
 
-.txt-uppercase {
-    text-transform: uppercase;
-}
+//FOOTER
 
 footer {
     background: #314584;
+    text-align: center;
 }
 
 .footer {
     color: #ffffff;
-    padding-top: 50px;
+    padding: 50px 20px 0px 20px;
 }
 
 .footer .nav li a {
@@ -266,13 +248,32 @@ footer {
 .footer .nav li:not(:first-child) {
     padding-left: 15px;
 }
+//
 
-
-.footer {
-    font-size: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+.txt-red-color {
+    color: #ff3946;
 }
+
+.txt-align-center {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #314584;
+}
+
+p+.block-title {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+
+.txt-uppercase {
+    text-transform: uppercase;
+}
+
+
 
 @media only screen and (min-width: 768px) {
 
@@ -280,16 +281,22 @@ footer {
         font-size: 14px;
     }
 
-    .title {
+//hero
+
+    .hero-title {
         font-size: 62px;
     }
 
-    .subtitle {
+    .block-title {
         font-size: 35px;
     }
-
-    .max-width_768 {
-        display: block;
+  
+    .nav {
+        padding-right: 15px;
+        padding-left: 15px;
+        display: inline;
+        position: static;
+        margin-left: 0;
     }
 
     .header .nav li,
@@ -306,99 +313,98 @@ footer {
         padding-left: 30px;
     }
 
-    .header .nav li:first-child {
+    .nav li:first-child {
         padding-left: 10px;
     }
 
-    .header .menuToggle {
+    .media-768 {
+        display: block;
+    }
+
+    .menuToggle {
         display: none;
     }
 
-    .header .nav {
-        padding-right: 15px;
-        padding-left: 15px;
-        display: inline;
-        position: static;
-        background: white;
-        margin-left: 0;
-    }
-
     .header select,
-    .header .header_item__button a,
-    .contacts .contacts_button {
+    .header_item__button a,
+    .contacts_button {
         font-size: 14px;
     }
 
-    .hero .hero-flex,
-    .contacts .form-flex {
+    .hero-flex,
+    .form-flex {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 
-    .hero .hero-flex {
+    .hero-flex {
         padding-top: 40px;
         padding-bottom: 150px;
     }
 
-    .hero .hero_item {
+    .hero_item {
         width: 50%;
     }
 
-    .hero .slider div img {
+    .slider div img {
         width: 100%;
     }
 
-    .hero .hero_item__button a {
+    .hero_item__button a {
         font-size: 14px;
     }
 
-    .title+p {
+    .hero-title+p {
         padding-bottom: 30px;
         padding-top: 30px;
         padding-right: 20px;
     }
 
-    .works .works-flex {
+//works
+
+    .works-flex {
         padding-top: 60px;
         padding-bottom: 60px;
     }
 
-    .contacts .form {
+//form
+
+    .form {
         width: 100%;
     }
 
-    .contacts .contacts_item{
+    .contacts_item {
         text-align: start;
     }
 
-    .contacts .form-flex p {
+    .form-flex p {
         width: 50%;
     }
 
-    .contacts .form-flex p:first-child {
+    .form-flex p:first-child {
         margin-right: 30px;
     }
 
-    .contacts form p input {
+    form p input {
         width: 100%;
-    }
-    .contacts form p input {
         height: 55px;
     }
 
-    .contacts form textarea {
+    form textarea {
         margin-top: 30px;
         height: 100px;
     }
 
-    .contacts .form-flex p input,
-    .contacts .form textarea {
+    .form-flex p input,
+    s .form textarea {
         font-size: 14px;
     }
 
-    p+.subtitle {
+//footer
+
+    p+.block-title {
         padding-bottom: 45px;
         padding-top: 20px;
     }
